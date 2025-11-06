@@ -1,22 +1,24 @@
 package com.example.lab4.ui.theme
 
-import androidx.compose.material3.*
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
 
 private val DarkColors = darkColorScheme(
-    primary = Color(0xFF5FB0FF),
-    onPrimary = Color.Black,
-    background = Color(0xFF0D1112),
-    surface = Color(0xFF111418),
-    onSurface = Color(0xFFE8EEF3)
+    primary = md_theme_primary,
+    onPrimary = md_theme_onPrimary,
+    background = md_theme_background,
+    surface = md_theme_surface,
+    onSurface = md_theme_onSurface
 )
 
 @Composable
 fun Lab4Theme(content: @Composable () -> Unit) {
+    val darkTheme = true
     MaterialTheme(
         colorScheme = DarkColors,
-        typography = Typography(),
+        typography = Typography,
         content = content
     )
 }
